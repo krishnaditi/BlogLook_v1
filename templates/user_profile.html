@@ -1,0 +1,82 @@
+{% extends "base.html" %} 
+{% block title %} Profile {% endblock %}
+{% block content %}
+
+<div class="p_page">
+        <div class="p_image">
+        <img src="/static/PROFILE/{{ uprof_['profile_pic'] }}">
+        </div>
+
+        <div class="p_name" style="width: 200px;">
+            <h1>{{ uprof['user_name'] }}</h1>
+            <span>{{ uprof['full_name'] }}</span>
+        </div>
+
+        <div class="p_data">
+
+            <!-- total posts -->
+            <div class="p_details">
+                <h2>Total Posts</h2>
+                <p>{{ uprof_['total_post'] }}</p>
+            </div>
+
+            <!-- followers -->
+            <div class="p_details">
+                <h2>Followers</h2>
+                <p>{{ frs }}</p>
+            </div>
+
+            <!-- following -->
+            <div class="p_details">
+                <h2>Following</h2>
+                <p>{{ fgs }}</p>
+            </div>
+
+        </div>        
+
+                <!-- about -->
+            <div class="p_about">
+                <h2>About</h2>
+                <p>
+                    {{ uprof_['about'] }}
+                </p>
+            </div>
+
+    </div>
+
+    <div class="my_blogs">
+        <!-- blog container -->
+    <div class="blog-container">
+        {% if uposts|length >= 1 %}
+        {% for p in uposts %} 
+
+        <!-- box-1 -->
+
+        <div class="blog-box">
+
+            <!-- blog image -->
+
+            <div class="blog-image">
+                <img src="/static/POST/{{ p['image'] }}" alt="Blog">
+                <a href="/comments/{{ uprof['user_name'] }}/{{ p['post_id'] }}">
+                    <i class="ri-chat-3-line" id="comment">Comment</i>
+                </a>
+            </div>
+
+            <!-- text -->
+            <div class="blog-text">
+                <span>{{ p['timestamp'] }}<i class="ri-user-line">
+                     <a href="/user_profile/{{ uprof['user_id'] }}/{{ user_id }}">{{ uprof['user_id'] }}</a>
+                    </i></span>
+                <a href="#" class="blog-title">{{ p['heading'] }}</a>
+                <p>{{ p['description'] }}</p>
+            </div>
+        </div>
+        {% endfor %}
+        {% endif %}
+    </div>
+    </div>
+
+    
+
+{% endblock %}

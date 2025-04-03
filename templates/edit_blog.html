@@ -1,0 +1,54 @@
+{% extends 'base.html' %}
+
+{% block title %} Edit blogs {% endblock %}
+
+{% block content %} 
+
+<div class="edit_blog" style="border: 1px solid white;
+background: url(../static/ab.jpg) no-repeat center/cover;
+position: relative; background-position: center;
+height: 99vh;">
+        <br><br>
+        <p style="font-size:2rem;text-decoration: underline;
+        color: black;font-weight: bold;
+        text-align: center; height: 10px;">Update Your Blog</p>
+        <br><br><br><br>
+    <form action="http://127.0.0.1:5000/editblog/{{ post_id }}" method = 'POST'  enctype="multipart/form-data">
+
+        <div class="Upload">
+            <!-- name of the blog -->      
+        <label>Heading of your Blog</label>
+        <input type="text" name="heading" id="head" value="{{ e_heading }}" style="box-sizing: border-box;">
+        <br>
+        <br>
+        </div>
+
+        <div class="Upload">
+            <!-- describe -->
+        <label>Description</label> 
+        <input type="text" name="description" id="des" value="{{ e_description }}">
+        <br>
+        <br>
+        </div>
+        
+        <div class="Upload">
+            <!-- image -->
+        <label> Image Upload </label>
+        <input type="file" name="blog_image" value="{{ e_image }}" style="cursor: pointer;">
+
+
+            <div class="post_now">
+
+                <!-- submit -->
+                <input type="submit" value="Post Now"  id="upl">
+            </div>
+        </div>
+
+        
+   
+        
+    </form>
+    
+</div>
+
+{% endblock %}

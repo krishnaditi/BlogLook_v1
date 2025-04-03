@@ -1,0 +1,101 @@
+{% extends "base.html" %} 
+{% block title %} Profile {% endblock %}
+{% block content %}
+
+<div class="p_page">
+        <div class="p_image">
+        <img src="../static/PROFILE/{{ dp }}">
+        </div>
+
+        <div class="p_name">
+            <h1>{{ user_id }}</h1>
+            <span>{{ fullname }}</span>
+        </div>
+
+        <!-- edit profile -->
+        <div class="pbtn">
+            <a href="/editprofile/{{ user_id }}">Edit Profile</a>
+        </div>
+
+        <!-- post engagement -->
+        <div class="ebtn">
+            <a href="/engagement/{{ user_id }}">Posts Engagement</a>
+        </div>
+
+        <div class="p_data">
+
+            <!-- total posts -->
+            <div class="p_details">
+                <h2>Total Posts</h2>
+                <p>{{ post_count }}</p>
+            </div>
+
+            <!-- followers -->
+            <div class="p_details">
+                <h2>Followers</h2>
+                <p>{{ followers }}</p>
+            </div>
+
+            <!-- following -->
+            <div class="p_details">
+                <h2>Following</h2>
+                <p>{{ following }}</p>
+            </div>
+
+        </div>        
+
+                <!-- about -->
+            <div class="p_about">
+                <h2>About</h2>
+                <p>
+                    {{ about }}
+                </p>
+            </div>
+
+</div>
+
+
+        <!-- blog container -->
+    <div class="blog-container">
+        {% if posts|length >= 1 %}
+        {% for post in posts %} 
+
+        <!-- box-1 -->
+
+        <div class="blog-box">
+
+            <!-- blog image -->
+
+            <div class="blog-image">
+                {% if(post["image"]) %}
+                    <img src="../static/POST/{{ post['image'] }}" alt="Blog">
+                {% endif %}
+                
+            </div>
+
+            <!-- text -->
+            <div class="blog-text">
+                <span style="font-size: 1rem;margin-bottom: 30px;">{{ post['timestamp'] }}</span>
+                <span style="margin-bottom: 20px;color: blue;">
+                    <i class="ri-user-line">
+                     <a href="/profile/{{ user_id }}" style="color: blue;">{{ user_id }}</a>
+                    </i></span>
+                <a href="#" class="blog-title">{{ post['heading'] }}</a>
+                <p>{{ post['description'] }}</p>
+            </div>
+            <a href="/editblog/{{ post['post_id'] }}">
+                <i class="ri-pencil-line" id="edit" method="GET">Edit</i></a>
+                <a href="/comments/{{ user_id }}/{{ post['post_id'] }}">
+                    <i class="ri-chat-3-line" id="comment">Comment</i>
+                </a>
+                <a href="/delete/{{ user_id }}/{{ post['post_id'] }}">
+                    <i class="ri-delete-bin-line" id="del"></i>
+                </a>
+        </div>
+        {% endfor %}
+        {% endif %}
+    </div>
+
+    
+
+{% endblock %}

@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign-up Page</title>
+    <link rel="stylesheet" type="text/css" href="../static/signup.css">
+</head>
+<body>
+<header>
+    <div class="main">
+        <div class="logo">
+            <img src="../static/logo.jpg">
+        </div>
+        <ul>
+            <li><a href="{{url_for('home')}}">Home</a></li>
+            <li><a href="{{url_for('login')}}">Login</a></li>
+            <li class="active"><a href="{{url_for('signup')}}">Signup</a></li>
+        </ul>
+    </div>
+</header>
+<div class="center">
+    <h1>Sign-Up</h1>
+    <form method="post">
+
+        <!-- Full Name -->
+        <div class="txt_field">
+            <input type="text"
+             id = "name"
+             name = "name"
+             maxlength = 200
+             required>
+            <label>Full Name</label>
+           </div>
+
+        <!-- Email-id -->
+        <div class="txt_field">
+            <input type="email"
+             id = "email"
+             name = "email-id"
+             maxlength = 40
+             required>
+            <label>Email-ID</label>
+           </div>
+
+        <!-- username -->
+       <div class="txt_field">
+        <input type="text"
+         id = "username"
+         name = "username" 
+         required>
+        <label>Username</label>
+       </div> 
+
+       <!-- password -->
+       <div class="txt_field">
+        <input  type = "password" 
+         id = "password"
+         name = "password"
+         required>
+        <label>Password</label>
+       </div>
+
+
+       <!-- submit button -->
+       <input type="submit" value="Sign-Up">
+
+    <div class="login_link" align = "center">
+        <p>Already have an account?
+            <a href = "/login">
+                Login
+            </a>
+        </p>
+    </div>
+    </form>
+</div>
+
+</body>
+</html>

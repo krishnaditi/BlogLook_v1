@@ -1,0 +1,29 @@
+{% extends 'base.html' %}
+
+{% block title %} Search {% endblock %}
+
+{% block content %} 
+
+<div class="search">
+    <div class="s_bar" align="center">
+    <form action="" method="post">
+        <input type="text" placeholder="Search" name="q">
+        <button type="submit"><i class="ri-search-line"></i></button>
+    </form>
+    </div>
+
+    <div class="res">
+       
+        {% for i in data %}
+    <div class="s_name">
+        <a href="/profile/{{ i.user_id }}">{{ i.user_id }}</a> &nbsp; 
+        
+        <a href="/unfollow/{{ i.profile_id }}/{{ user_id }}" id="unf"><button>Unfollow</button></a>
+        <a href="/follow/{{ i.profile_id }}/{{ user_id }}" id="f"><button>Follow</button></a>
+    </div>
+    
+        {% endfor %}
+    </div>  
+</div>
+
+{% endblock %}

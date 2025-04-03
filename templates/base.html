@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>
+        {% block title %} Blog-Look {% endblock %}</title>
+    <!-- link to css file -->
+    <link rel="stylesheet" type="text/css" href="/static/base.css">
+    <!-- remix icons -->
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet">
+
+</head>
+<body>
+    <!-- sidebar -->
+    <div class="sidebar">
+        <a href="#" class="logo">
+            <img src="/static/logo.jpg" alt="">
+        </a>
+        <!-- profile image -->
+        <div class="profile">
+            <div class="profile-image">
+            <img src="/static/PROFILE/{{ dp }}">
+            </div>
+
+            <div class="profile-name">
+                <h1>{{ user_id }}</h1>
+            </div>
+            <span>{{ fullname }}</span> 
+        </div>
+        <!-- about -->
+        <div class="about">
+            <!-- box-1 -->
+            <div class="box">
+                <h3>{{ post_count }}</h3>
+                <span>Posts</span>
+            </div>
+            <!-- box-2 -->
+            <div class="box">
+                <a href="/followers/{{ user_id }}" style="color: black;">
+                <h3>{{ followers }}</h3>
+                <span>Followers</span>
+                </a>
+            </div>
+            <!-- box-3 -->
+            <div class="box">
+                <a href="/following/{{ user_id }}" style="color: black;">
+                <h3>{{ following }}</h3>
+                <span>Following</span>
+                </a>
+            </div>
+        </div>
+        <!-- menu -->
+        <div class="menu">
+            <a href="/userfeed/{{ user_id }}">
+                <span class="icon">
+                    <i class="ri-function-line"></i>
+                </span>
+                Feed
+            </a>
+
+            <a href="/profile/{{ user_id }}">
+                <span class="icon">
+                    <i class="ri-profile-line"></i>
+                </span>
+                Profile
+            </a>
+
+            <a href="/Add_Blogs/{{ user_id }}">
+                <span class="icon">
+                    <i class="ri-add-circle-fill"></i>
+                </span>
+                Add Blogs
+            </a>
+
+            <a href="/search/{{ user_id }}">
+                <span class="icon">
+                    <i class="ri-search-line"></i>
+                </span>
+                Search
+            </a>
+
+            <a href="/delete_user/{{ user_id }}">
+                <span class="icon">
+                    <i class="ri-account-circle-line"></i>
+                </span>
+                Delete Account
+            </a>
+
+
+            <a href="/logout">
+                <span class="icon">
+                    <i class="ri-logout-box-r-line"></i>
+                </span>
+                Logout
+            </a>
+        </div>
+    </div>
+    <!-- main home -->
+    <div class="main-home">
+        {% block content %} {% endblock %}
+    </div>
+</body>
+</html>

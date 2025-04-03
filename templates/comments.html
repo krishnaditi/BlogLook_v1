@@ -1,0 +1,23 @@
+{% extends "base.html" %} 
+{% block title %} Comments {% endblock %}
+{% block content %}
+<div class="comments">
+    <div class="c_box">
+    <form action="" method="post">
+        <input type="text" placeholder="Comment" name="r" required>
+        
+        <button type="submit" method = "post"><i class="ri-chat-3-line"></i></button>
+    </form>
+    </div>
+<div class="p_chat">
+    <ol>
+    {% for i in comments %}
+    <li>{{ i.comment }}
+    </li>
+    {% endfor %}
+</ol>
+
+</div>
+</div>
+
+{% endblock %}

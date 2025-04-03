@@ -1,0 +1,48 @@
+{% extends 'base.html' %}
+
+{% block title %} User's Feed {% endblock %}
+
+{% block content %} 
+
+
+<!-- Blog-section -->
+<section id="blog">
+    <!-- heading -->
+    <div class="blog-heading">
+        <h3>Blog-Look</h3>
+        <span>Latest Blogs</span>
+    </div>
+
+    <!-- blog container -->
+    <div class="blog-container">
+        {% for pst in posts %}
+        <!-- box-1 -->
+        <div class="blog-box">
+            <!-- blog image --> 
+            {% if pst.image  %}
+            <div class="blog-image">
+                <img src="/static/POST/{{ pst.image }}" alt="Blog">
+            </div>
+            {% endif %}
+            <!-- text -->
+            <div class="blog-text">
+                <span style="font-size: 1rem;margin-bottom: 30px;">{{ pst.timestamp }}</span>
+                <span style="margin-bottom: 20px;color: blue;">
+                    <i class="ri-user-line">
+                        <a href="/user/{{ pst.user }}/profile/{{ user_id }}" style="color: blue;">
+                        {{ pst.user}}</a></i>
+                    </span>
+                <a href="#" class="blog-title">{{ pst.heading }}</a>
+                <p class="blog-section">{{pst.description}}</p>
+            </div>
+            <a href="/comments/{{ user_id }}/{{ pst['post_id'] }}">
+                <i class="ri-chat-3-line" id="comment">Comment</i>
+            </a>
+        </div>
+        {% endfor %}
+    </div>
+</section>
+
+
+
+{% endblock %}

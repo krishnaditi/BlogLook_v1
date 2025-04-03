@@ -1,0 +1,29 @@
+{% extends "base.html" %} 
+{% block title %} Followers {% endblock %}
+{% block content %}
+
+
+<div class="followers" style="display: flex;align-items: center;
+justify-content: center;">
+
+<div class="follow" style="text-decoration: underline;">Your Followers</div>
+{% if f %}
+{% for i in f%}
+<div class="fl" style="width: 700px;margin: 20px 0px;font-size: 2rem;font-weight: bold;
+height: 50px;position: relative;">
+
+<a href="/user/{{ i['user_id'] }}/profile/{{ user_id }}">{{ i["user_id"] }}</a>
+<a href="/f/follow/{{ i['profile_id'] }}/{{ i['user_id'] }}">
+    <button style="position: absolute;right: 110px;font-size: 1.4rem;
+    padding: 3px;">Follow</button></a>
+<a href="/following/unfollow/{{ i['profile_id'] }}/{{ i['user_id'] }}"><button style="position: absolute;right: 5px;
+    font-size: 1.4rem;
+    padding: 3px;">Unfollow</button></a>
+
+{% endfor %}
+</div>
+{% endif %}
+
+</div>
+
+{% endblock %}

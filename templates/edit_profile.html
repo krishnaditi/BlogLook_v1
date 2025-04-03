@@ -1,0 +1,28 @@
+{% extends "base.html" %} 
+{% block title %} Edit Profile {% endblock %}
+{% block content %}  
+
+
+
+<div class="edit">
+    <div class="e_profile">
+    <h1>Edit Your Profile</h1>
+    <form action="http://127.0.0.1:5000/editprofile/{{ user_id }}" method='POST' enctype="multipart/form-data">
+        <label>Enter your full name</label>
+        <br> 
+        <input type="text" name="fullname" value="{{ fullname }}">
+        <br>
+        <label>Give a description about yourself</label>
+        <input type="text" name="about" value="{{ about  }}" id="desc">
+        <br>
+        <label>Upload your profile picture</label>
+        <input type="file" name="image">
+        <br>
+        <input type="submit" value="Update Profile" id="u_profile">  
+    </form>
+</div>
+</div>
+
+{% endblock %}
+
+
