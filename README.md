@@ -41,28 +41,17 @@ The BlogLook Application is a web platform that allows users to socially connect
 /BlogLook_v1
 │-- static              # CSS and image files
 │-- templates           # HTML templates
-│   | app1.py            # Configuration and API endpoints
-│   models.py
-│-- Project Documentation.pdf  # Project Report
+│   │   ├── Add_Blogs.html
+│   │   ├── base.html
+│   │   ├── home.html
+│   │   ├── login.html
+│   │   ├── ..
 │   app1.py            # Configuration and API endpoints
 │   models.py
+|
+│-- Project Documentation.pdf  # Project Report
 │-- README.md
 
-
-
-
-project_database.sqlite3
-Add files via upload
-17 minutes ago
-readme.md
-Add files via upload
-17 minutes ago
-requirements.txt
-
-
-│
-
-│-- openapi.yaml
 
 ```
 
