@@ -1,0 +1,748 @@
+/* Google fonts */
+@import url('https://fonts.googleapis.com/css2?family=Yeon+Sung&display=swap');
+* {
+    font-family: 'Yeon Sung', 'cursive'; 
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    list-style: none;
+    text-decoration: none;
+}
+body {
+    background: white;
+}
+
+.sidebar {
+    position: fixed;
+    width: 300px;
+    height: 100vh;
+    background: #008489;
+    /* z-index: 2; */
+    padding: 20px;
+}
+.main-home {
+    position: absolute;
+    width: calc(100% - 300px);
+    top: 0px;
+    left: 300px;
+    background: white;
+    /* border-radius: 1rem 0 0 1rem; */
+    /* z-index: 1000; */
+}
+
+.logo img {
+    width: 100px;
+    height: 100px;
+    border: 5px solid #05f7ff;
+    margin-left: 80px; 
+}
+
+.profile {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-top: 1.4rem;
+}
+
+.profile-image {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    border: 2px solid #05f7ff;
+}
+
+.profile-image img {
+    width: 90px;
+    height: 90px;
+    object-fit: cover;
+    border-radius: 50%;
+    object-position: center;
+}
+
+.profile-image span {
+    font-size: 0.938rem;
+    font-weight: 400;
+}
+
+.profile-name {
+    display: flex;
+    align-items: center;
+    margin: 1rem 0 0.4rem;
+}
+
+.profile-name h1 {
+    font-size: 1.1rem;
+}
+
+.profile-name img {
+    margin-left: 4px;
+    width: 20px;
+    object-fit: contain;
+}
+
+.profile-name span{
+    font-size: 0.5rem;
+    position: absolute;
+    top: 50px;
+    min-width: 200px;
+    font-weight: bold;
+}
+
+.about {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 1rem;
+}
+
+.box {
+    text-align: center;
+}
+
+.box h3 {
+    font-size: 1rem;
+    font-weight: 500;
+}
+
+.box span {
+    font-size: 0.938rem;
+    font-weight: 400;
+}
+
+.menu a {
+    width: 100%;
+    font-size: 1rem;
+    color: black;
+    display: flex;
+    align-items: center;
+    line-height: 40px;
+}
+
+.menu a:hover,
+.menu .active {
+    color: wheat;
+}
+
+.menu .icon {
+    margin-right: 1rem;
+    font-size: 20px;
+}
+
+/* main home */
+
+
+/*---------------------------------------- userfeed css --------------------------------------------------*/
+
+
+.main-home {
+    padding: 0px;
+    overflow: hidden;
+    top: 5px;
+}
+
+a{
+    text-decoration: none;
+}
+
+ul{
+    list-style: none;
+}
+
+#blog{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 40px;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+}
+
+.blog-heading{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.blog-heading span{
+    color: #f33c3c;
+    font-size: 1.7rem;
+    text-shadow: brown 2px 2px 5px;
+    text-decoration: underline;
+}
+
+.blog-heading h3{
+    font-size: 2.5rem;
+    color: black;
+    padding: 10px;
+    font-weight: bold;
+    font-weight: 600;
+    text-shadow: gray 2px 2px 5px;
+}
+
+.blog-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 20px 0px;
+    flex-wrap: wrap;
+}
+
+.blog-box{
+    width:350px;
+    background-color: white;
+    border: 1px solid white;
+    margin: 20px;
+}
+
+.blog-image{
+    width: 100%;
+    height: auto;
+}
+
+.blog-image i{
+    justify-content: left;
+    text-align: left;
+    /* border: 1px solid red; */
+    margin-left: 50px;
+    margin: 2px;
+    font-weight: bold;
+    font-size: 1rem;
+}
+
+#edit:hover{
+    color: palevioletred;
+    cursor: pointer;
+}
+
+#comment:hover{
+    color: green;
+    cursor: pointer;
+}
+
+.blog-image img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+}
+
+.blog-text{
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+}
+
+.blog-text span{
+    /* border: 1px solid red; */
+    font-size: 1.5rem;
+    text-align: center;
+    justify-content: center;
+    margin: 0px;
+    margin-top: 0%;
+}
+
+.blog-text .blog-title{
+    font-size: 1.3rem;
+    font-weight: 500;
+    color: #2b2b2b;
+}
+
+.blog-text p{
+    color: gray;
+    font-size: 0.9rem;
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    margin: 20px 0px;
+}
+
+.blog-text a{
+    color: black;
+}
+
+
+/* ------------------------------------profile css ------------------------------------------------*/
+
+
+
+.p_page {
+    background: url(../static/p_background.jpg) no-repeat center/cover;
+    border-radius: 0px;
+    color: #fdfffb;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-top: 0rem;
+    /* border: 1px solid red; */
+    min-height: 250px;
+    position:relative;
+}
+
+.p_image {
+    display: flex;
+    position: absolute;
+    align-items: center;
+    justify-content: center;
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    border: 2px solid red;
+    left: 25px;
+    bottom: 70px;
+}
+
+.p_image img {
+    width: 140px;
+    height: 140px;
+    object-fit: cover;
+    border-radius: 50%;
+    object-position: center;
+}
+
+.p_name {
+    display: flex;
+    position: absolute;
+    margin: 1rem 0 0.4rem;
+    left: 200px;
+    top: 40px;
+}
+
+.p_name h1 {
+    position: absolute;
+    font-size: 2rem;
+    width: 100px;
+}
+
+.p_name span{
+    font-size: 1.5rem;
+    position: absolute;
+    top: 50px;
+    min-width: 200px;
+    font-weight: bold;
+}
+
+.pbtn a{
+    display: block;
+    position: absolute;
+    text-decoration: none;
+    border: 1px solid gray;
+    padding: 2px;
+    width: 100px;
+    color: white;
+    font-weight: bold;
+    text-align: center;
+    left: 5%;
+    bottom: 25px;
+}
+
+.pbtn a:hover{
+    color: wheat;
+    background: #444; 
+}
+
+.ebtn a{
+    display: block;
+    position: absolute;
+    text-decoration: none;
+    border: 1px solid gray;
+    padding: 2px;
+    width: 180px;
+    color: white;
+    font-weight: bold;
+    text-align: center;
+    right: 10px;
+    bottom: 20px;
+    z-index: 99;
+}
+
+.ebtn a:hover{
+    color: wheat;
+    background: #444; 
+}
+
+.p_data {
+    /* border: 1px solid red; */
+    padding: 10px;
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 80px;
+    min-width:600px;
+    right: 40px;
+    position: absolute;
+}
+
+.p_details{
+    padding: 8px;
+    font-size: 1.5rem;
+    min-width: 80px;
+    min-height: 80px;
+    /* border: 1px solid blue; */
+    text-align: center;
+    margin: 17px;
+}
+
+
+.p_details h2 {
+    font-weight: 500;
+    right: 10px;
+
+}
+
+.p_about{
+    /* border: 1px solid green; */
+    bottom: 5px;
+    position: absolute;
+    width: 810px;
+    float: right;
+    left: 200px;
+    
+}
+
+#del:hover{
+    color: rgb(221, 0, 0);
+    cursor: pointer;
+}
+
+#del{
+    /* border: 1px solid red; */
+    margin-right: 40px;
+    margin-left: 190px;
+    width: 20px;
+    margin-top: 0px;
+    margin-bottom: 100px;
+    position:absolute;
+}
+
+
+/* -------------------------------------- edit profile ----------------------------------------------- */
+
+.edit{
+    /* border: 1px solid red; */
+    min-height:100vh ;
+    background-size: cover; 
+    position: relative;
+    background-position: center;
+}
+
+.e_profile{
+    position: absolute;
+    width: 450px;
+    background: url(../static/h1.jpg) no-repeat center/cover;
+    min-height: 450px;
+    margin-left: 300px;
+    /* border:1px solid red; */
+    top: 80px;
+    display:absolute;
+    font-size: large;
+    font-weight: bold;
+    box-shadow: 10px 10px 20px rgb(1, 74, 219);
+}
+
+.e_profile h1{
+    margin: 5px;
+    font-size:2rem;
+    text-decoration: underline;
+    color: wheat;
+    text-align: center;
+}
+
+.e_profile form{
+    color:white;
+    /* border: 1px solid red; */
+    font-size: 1.4rem;
+    margin: 15px;
+    padding: 30px;
+    justify-content: center;
+    text-align: center;
+    min-height: 400px;
+}
+
+.e_profile input{
+    margin: 20px;
+    width: 150px;
+    height: 30px;
+    font-size: 0.9rem;
+}
+
+#desc{
+    width:250px;
+    height: 40px;
+
+}
+
+#u_profile{
+    font-weight: bold;
+    font-size: 1.2rem;
+    background-color: rgb(180, 180, 180);
+
+}
+
+#u_profile:hover{
+
+    background-color: wheat;
+    cursor: pointer;
+    box-shadow: 2px 2px 5px wheat;
+}
+
+
+/* --------------------------------------Add Blogs---------------------------------------------------------- */
+
+
+.Upload{
+    /* border: 1px solid red; */
+    margin-top: 40px;
+}
+
+.add_blog form{
+    margin-left: 100px;
+    margin-right: 100px;
+    margin-bottom: 400px;
+}
+
+.add_blog label{
+    font-size: 1.3rem;
+    font-weight: bold;
+}
+
+.add_blog input{
+    box-sizing: border-box;
+    border-color: blue;
+    justify-content: center;
+    text-align: center;
+    cursor: auto;
+    font-size: 1.4rem;
+}
+
+#head{
+    width:400px;
+    height: 60px;
+}
+
+#des{
+    width:700px;
+    height: 100px;
+}
+
+#upl{
+    width: 100px;
+    height: 30px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+#upl:hover{
+    color: purple;
+    background-color: wheat;
+    font-weight: bold;
+    box-sizing: border-box;
+    box-shadow: 5px 5px 10px rgb(88, 88, 249);
+}
+
+.post_now{
+    padding: 60px;
+    text-align: center;
+}
+
+/* ----------------------------------------edit blog------------------------------------ */
+
+.edit_blog form{
+    margin-left: 100px;
+    margin-right: 100px;
+    margin-bottom: 400px;
+}
+
+.edit_blog label{
+    font-size: 1.3rem;
+    font-weight: bold;
+}
+
+.edit_blog input{
+    box-sizing: border-box;
+    border-color: blue;
+    justify-content: center;
+    text-align: center;
+    cursor: auto;
+    font-size: 1.4rem;
+}
+
+
+
+
+
+/* -----------------------------search--------------------------------- */
+
+
+.search{
+    /* border: 1px solid red; */
+    width: 100%;
+    min-height: 98vh;
+    padding: 5%;
+    background: url(../static/ab.jpg);
+    background-position: center;
+    background-size: cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+
+.s_bar{
+    border: 3px solid rebeccapurple;
+    top: 100px;
+    width: 100%;
+    max-width: 700px;
+    background: wheat;
+    display: flex;
+    align-items: center;
+    border-radius: 60px;
+    padding: 0px 0px;
+    position: absolute;
+    justify-content: center;
+    left: 200px;
+}
+
+.s_bar input{
+    border: 0;
+    background: transparent;
+    outline: none;
+    padding: 24px 20px;
+    font-size: 20px;
+    color: black;
+    width: 610px;
+}
+
+::placeholder{
+    color: black;
+}
+
+.s_bar button{
+    border: 0;
+    border-radius: 50%;
+    width: 60px;
+    height: 60px;
+    background: transparent;
+    cursor: pointer;
+}
+
+.res{
+    /* border: 1px solid red; */
+    padding: 10px 20px;
+    margin-top:0px;
+    margin-right: 600px;
+    width: 600px;
+    position: absolute;
+    left: 250px;
+    top: 200px;
+    font-weight: bold;
+    font-size: 1.6rem;
+}
+
+.s_name{
+    /* border: 1px solid rebeccapurple; */
+    margin: 15px;
+    height: 40px;
+    position: relative;
+}
+
+.s_name a{
+    display: inline;
+    position: absolute;
+    margin-right: 10px;
+}
+
+#unf{
+    right: 5px;
+}
+
+#f{
+    right: 110px;
+}
+
+.s_name a button{
+    /* border: 1px solid red; */
+    font-weight: bold;
+    font-size: 1.3rem;
+    padding: 4px;
+    
+}
+
+
+
+/* ---------------------------follow--------------------------------------- */
+
+.followers{
+    padding: 0px;
+    margin: 0px;
+    /* border: 1px solid red; */
+    background: url(../static/ab.jpg) no-repeat center/cover;
+    background-color: transparent;
+    height: 99vh;
+}
+
+ .follow{
+    /* border: 1px solid red; */
+    position: absolute;
+    font-size: 3rem;
+    padding: 3px;
+    font-weight: bold;
+    margin-top: 0px;
+    margin-left: 400px;
+    margin-right: 400px;
+    margin-bottom: 450px;
+    width: 300px;
+    color: rgb(39, 33, 33);
+    text-shadow: 5px 5px 10px rgb(107, 42, 42);
+}
+
+
+/* --------------------------------------------comments----------------------------------------------- */
+
+.comments{
+    /* border: 1px solid red; */
+    min-height: 99vh;
+    position: relative;
+    background: url(../static/ab.jpg) no-repeat center/cover;
+}
+
+.c_box{
+    /* border: 1px solid red; */
+    position: absolute;
+    top: 40px;
+    width: 500px;
+    left: 300px;
+}
+
+.c_box input{
+    font-size: 1.6rem;
+    font-weight: bold;
+    width: 90%;
+}
+
+.c_box button{
+    width: 9%;
+    font-size: 1.4rem;
+    font-weight: bold;
+}
+
+.p_chat{
+    /* border: 1px solid red; */
+    position: absolute;
+    top: 100px;
+    width: 500px;
+    left: 300px;
+    font-size: 1.3rem;
+    font-weight: bold;
+    overflow: auto;
+    max-height: 80vh;
+}
+
+.p_chat ol{
+    list-style-type:lower-roman;
+}
