@@ -39,43 +39,29 @@ The BlogLook Application is a web platform that allows users to socially connect
 
 ```plaintext
 /BlogLook_v1
-│-- backend
-│   ├── application        # Backend folder
-│   │   ├── static         # Images and CSV files
-│   │   ├── templates      # HTML pages for triggered jobs
-│   │   ├── api.py         # Flask APIs
-│   │   ├── cache.py       # Cache initialization
-│   │   ├── clry.py        # Celery initialization
-│   │   ├── emailgen.py    # SMTP initialization
-│   │   ├── models.py      # Database tables
-│   │   ├── tasks.py       # Jobs triggered
-|   |
-│   ├── 21f1004270-Project Documentation.pdf  # Project Report
-│   ├── app.py            # Configuration and API endpoints
-│   ├── requirements.txt   # Libraries used
-│
-│-- frontend
-│   ├── src
-│   │   ├── assets         # Images
-│   │   ├── components     # Vue components
-│   │   │   ├── Add_Blogs.vue
-│   │   │   ├── DeleteBlog.vue
-│   │   │   ├── DeleteUser.vue
-│   │   │   ├── EngageMent.vue
-│   │   │   ├── FollowersPg.vue
-│   │   │   ├── FollowingPg.vue
-│   │   │   ├── HomePage.vue
-│   │   │   ├── LoginPage.vue
-│   │   │   ├── MyProfile.vue
-│   │   │   ├── OtherProfile.vue
-│   │   │   ├── ...
-│   │   ├── router
-│   │   ├── store
-│   │   ├── views
-│   │   │   ├── App.vue
-│   │   │   ├── main.js
-│
+│-- static              # CSS and image files
+│-- templates           # HTML templates
+│   | app1.py            # Configuration and API endpoints
+│   models.py
+│-- Project Documentation.pdf  # Project Report
+│   app1.py            # Configuration and API endpoints
+│   models.py
 │-- README.md
+
+
+
+
+project_database.sqlite3
+Add files via upload
+17 minutes ago
+readme.md
+Add files via upload
+17 minutes ago
+requirements.txt
+
+
+│
+
 │-- openapi.yaml
 
 ```
